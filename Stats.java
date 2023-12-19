@@ -28,7 +28,7 @@ public class Stats{
 	double dev = Math.sqrt(sumSquare)/(n-1);
 	
 	
-	StdOut.println("The standard Deviation is "+ dev);
+	StdOut.printf("%s %.4f", "Standard deviation is", dev);
 	
 	}
 
