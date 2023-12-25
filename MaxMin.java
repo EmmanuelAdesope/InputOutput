@@ -1,30 +1,25 @@
 public class MaxMin {
 	public static void main (String[] args){
 	
-		StdOut.println("úser to enter size of array"); //Displays message prompt to user
+		// reads in first input from user
+		int no = StdIn.readInt(); 
 		
-		int n = StdIn.readInt();  //read in array size from user input
+		int min = no ;
+		int max = (int) Double.NaN;
 		
-		int arr [] = new int [n];  // creates array with length n 
+		// reads in corresponding input from user or file
 		
-		StdOut.println("user to input desired numbers"); // Displays message prompt to user
+		while(!StdIn.isEmpty()){
 		
-		for (int i = 0; i < n ; i++){   // initializes array values with user inputs
+			int next = StdIn.readInt();
 			
-			arr[i] = StdIn.readInt();   // user inputs integer values
+			if(next < min ) min = next;
+			if(max < next ) max = next;
+			
+			
 			
 		}
 	
-		
-		int min = arr[0];     			
-		int max = arr[1];
-
-
-		for(int i = 0; i < n; i++){
-			
-			if (arr[i] < min) min = arr[i]; // checks for minimum value in the array and updates accordingly 
-			if (max < arr[i]) max = arr[i]; // checks for maximum value in the array and updates accordingly
-		}
 	
 		StdOut.println("minimum value is "+ min);
 		StdOut.print("maximum value is "+ max);
